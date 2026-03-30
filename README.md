@@ -49,7 +49,7 @@ This repository contains my solutions to the Roche Analytical Data Science Progr
   - TEAE summary table by SOC and Preferred Term with treatment columns and total
   - AE severity distribution stacked bar chart by treatment arm
   - Top 10 most frequent AEs forest plot with 95% Clopper-Pearson confidence intervals
-
+     
 ## How to Run
 
 ### Prerequisites
@@ -72,3 +72,17 @@ Run each script independently in order:
 - R version: 4.5
 - Platform: Posit Cloud
 - AI assistance: Claude (Anthropic) used as coding assistant per assessment guidelines
+
+### Question 4: GenAI Clinical Data Assistant (Bonus)
+- **Language**: Python
+- **Packages**: `pandas`, `json`
+- **Input**: `adae.csv` (exported from `pharmaverseadam::adae`)
+- **Approach**: Implemented `ClinicalTrialDataAgent` class with mocked LLM following 
+  the complete Prompt -> Parse -> Execute logic flow. In production this would call 
+  OpenAI via LangChain — the mock implements identical logic with rule-based parsing.
+- **Schema**: Defined column descriptions for AESEV, AETERM, and AESOC to guide LLM mapping
+- **Test queries**:
+  1. Moderate severity AEs → 136 subjects
+  2. Dizziness → 22 subjects  
+  3. Cardiac disorders → 44 subjects
+     
