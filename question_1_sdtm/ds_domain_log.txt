@@ -1,0 +1,43 @@
+=== DS Domain Creation Log ===
+Date: 2026-03-30 18:37:47 
+
+Input: pharmaverseraw::ds_raw
+Output: ds_domain.rds / ds_domain.csv
+
+Variables in output:
+ [1] "STUDYID"  "DOMAIN"   "USUBJID"  "DSSEQ"    "DSTERM"   "DSDECOD"  "DSCAT"    "VISITNUM"
+ [9] "VISIT"    "DSDTC"    "DSSTDTC"  "DSSTDY"  
+
+Dimensions: 850 12 
+
+First 10 records:
+# A tibble: 10 × 12
+   STUDYID      DOMAIN USUBJID     DSSEQ DSTERM     DSDECOD DSCAT VISITNUM VISIT DSDTC DSSTDTC DSSTDY
+   <chr>        <chr>  <chr>       <int> <chr>      <chr>   <chr>    <dbl> <chr> <chr> <chr>    <dbl>
+ 1 CDISCPILOT01 DS     01-701-1015     1 Randomized RANDOM… DISP…        1 Base… 2014… 2014-0…      1
+ 2 CDISCPILOT01 DS     01-701-1015     2 Protocol … COMPLE… DISP…       26 Week… 2014… 2014-0…    182
+ 3 CDISCPILOT01 DS     01-701-1015     3 Final Lab… LACK O… DISP…       26 Week… 2014… 2014-0…    182
+ 4 CDISCPILOT01 DS     01-701-1023     1 Randomized RANDOM… DISP…        1 Base… 2012… 2012-0…      1
+ 5 CDISCPILOT01 DS     01-701-1023     2 Adverse E… ADVERS… DISP…        4 Week… 2012… 2012-0…     29
+ 6 CDISCPILOT01 DS     01-701-1023     3 Final Lab… LACK O… DISP…        4 Week… 2012… 2012-0…     29
+ 7 CDISCPILOT01 DS     01-701-1023     4 Final Ret… LACK O… DISP…       NA Retr… 2013… 2013-0…    198
+ 8 CDISCPILOT01 DS     01-701-1028     1 Randomized RANDOM… DISP…        1 Base… 2013… 2013-0…      1
+ 9 CDISCPILOT01 DS     01-701-1028     2 Protocol … COMPLE… DISP…       26 Week… 2014… 2014-0…    180
+10 CDISCPILOT01 DS     01-701-1028     3 Final Lab… LACK O… DISP…       26 Week… 2014… 2014-0…    180
+
+DSDECOD distribution:
+
+              ADVERSE EVENT                   COMPLETED                       DEATH 
+                         92                         110                           3 
+           LACK OF EFFICACY           LOST TO FOLLOW-UP          PHYSICIAN DECISION 
+                        294                           2                           3 
+         PROTOCOL VIOLATION                  RANDOMIZED              SCREEN FAILURE 
+                          6                         254                          52 
+STUDY TERMINATED BY SPONSOR       WITHDRAWAL BY SUBJECT 
+                          7                          27 
+
+Missing DSDTC: 0 
+Missing DSSTDTC: 0 
+Missing DSSTDY: 52 
+
+Program completed successfully with 850 records.
