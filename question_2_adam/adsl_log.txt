@@ -1,0 +1,26 @@
+=== ADSL Creation Log ===
+Date: 2026-03-30 19:19:37 
+
+Input datasets: dm, vs, ex, ds, ae
+Output: adsl.rds / adsl.csv
+
+Dimensions: 306 26 
+Variables:
+ [1] "STUDYID"  "USUBJID"  "SUBJID"   "SITEID"   "AGE"      "AGEU"     "SEX"      "RACE"     "ETHNIC"  
+[10] "ARMCD"    "ARM"      "ACTARMCD" "ACTARM"   "COUNTRY"  "RFSTDTC"  "RFENDTC"  "RFXSTDTC" "RFXENDTC"
+[19] "TRTSDT"   "TRTEDT"   "TRTSDTM"  "TRTSTMF"  "AGEGR9"   "AGEGR9N"  "ITTFL"    "LSTAVLDT"
+
+ITTFL:
+
+  N   Y 
+ 52 254 
+
+AGEGR9:
+
+    >50 18 - 50 
+    305       1 
+
+Missing TRTSDTM: 52 
+Missing LSTAVLDT: 0 
+
+Program completed successfully with 306 records.
